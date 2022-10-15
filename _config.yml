@@ -97,10 +97,10 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : "G-C032DGWN39"
+    anonymize_ip         : true # true, false (default)
 
 
 # Site Author
@@ -109,14 +109,14 @@ author:
   avatar           : "/imgs/bio-cup.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "남이야 뭐라 하건!"
   location         : "Seoul, Korea"
-  email            : "hynjng.yeo@gmail.com"
+  # email            : "hynjng.yeo@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:hynjng.yeo@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://nearnear.github.com"
+      # url: "https://nearnear.github.com"
     - label: "Twitter"
       # icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -141,7 +141,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/nearnear"
+      # url: "https://github.com/nearnear"
     - label: "GitLab"
       # icon: "fab fa-fw fa-gitlab"
       # url:
