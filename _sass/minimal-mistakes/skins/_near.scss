@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Near skin
+   ========================================================================== */
+
+/* Colors */
+$background-color: rgb(223, 230, 230) !default;
+$text-color: #2a363c !default;
+$muted-text-color: #47555a !default;
+$primary-color: #4e7d8a !default;
+$border-color: mix(#fff, #4e6974, 75%) !default;
+$footer-background-color: rgb(177, 194, 198) !default;
+$link-color: #1b5b5d !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+
+.page__footer {
+  color: rgb(243, 252, 255) !important; // override
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
