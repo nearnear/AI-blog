@@ -1,12 +1,58 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Category"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+
+
+# sidebars
+side:
+  - title: NEWS
+    children:
+      - title: "업데이트"
+        url: /news/updates/
+      - title: "근황/후기"
+        url: /news/recent/
+
+  - title: AI 노트
+    children:
+      - title: "ML/DL"
+        url: /ai-note/ml-dl/
+      - title: "Papers"
+        url: /ai-note/papers/
+      - title: "MLOps"
+        url: /ai-note/mlops/
+
+  - title: CS 노트
+    children:
+      - title: "CS"
+        url: /cs-note/cs/
+      - title: "Python"
+        url: /cs-note/python/
+      - title: "Algorithm"
+        url: /cs-note/algorithm/
+      - title: "Git & Github"
+        url: /cs-note/git/
+      - title: "DBMS"
+        url: /cs-note/dbms/
+      - title: "AWS"
+        url: /cs-note/aws/
+      - title: "Crawling"
+        url: /cs-note/crawl/
+
+  - title: THEORY 노트
+    children:
+      - title: "Math"
+        url: /theory-note/math/
+      - title: "Statistics"
+        url: /theory-note/stats/
+      - title: "Information"
+        url: /theory-note/information/
+      - title: "Physics"
+        url: /theory-note/physics/
+
+  - title: ETC
+    children:
+      - title: "?"
+        url: /etc/planning/
