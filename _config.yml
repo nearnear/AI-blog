@@ -15,7 +15,7 @@ remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "near" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KO"
+locale                   : "ko-KR"
 title                    : "니아로그"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
@@ -326,10 +326,10 @@ defaults:
       type: projects
     values:
       layout: collection
-      entries_layout: grid
+      # entries_layout: grid
       show_date: true
       date_format: "%Y-%m-%d"
-      classes: wide
+      # classes: wide
       share: true
       sidebar:
         nav: "side"
