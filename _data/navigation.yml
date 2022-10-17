@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "Category"
-    url: /categories/
   - title: "Projects"
     url: /projects/
+  - title: "Category"
+    url: /categories/
   - title: "Tags"
     url: /tags/
 
@@ -15,7 +15,7 @@ side:
       - title: "업데이트"
         url: /news/updates/
       - title: "근황/후기"
-        url: /news/recent/
+        url: /news/recents/
 
   - title: AI 노트
     children:
