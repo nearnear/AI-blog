@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "near" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "니아로그"
+title                    : "Study log"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "near"
@@ -302,8 +302,8 @@ defaults:
       comments: true
       share: true
       related: true
-      sidebar:
-        nav: "docs"
+      # sidebar:
+      #   nav: "side"
   # _pages
   - scope:
       path: "_pages"
