@@ -2,7 +2,7 @@
 title: "Minimal Mistakes 사용법"
 categories: updates
 tags:
-    - Jekyll
+    - jekyll
     - minimal-mistakes
 ---
 
@@ -112,6 +112,34 @@ gallery:
 **Please Note:** Like this.
 {: .notice--danger}
 
+### 이미지 첨부하기
+이미지를 첨부하는 방식은 크게 두가지가 있다. `![](url)` 형식을 이용하거나, html의 `<figure>`를 이용하는 것이다.
+
+우선 마크다운 형식으로는 다음과 같이 정렬할 수 있다.
+```md
+![image-center](/imgs/bio-cup.jpg){: .align-center}
+```
+
+`<figure>`를 이용해 다음과 같이 더 깔끔하게(pretty) 업로드가 가능하며, 이미지 정렬과 크기 설정도 가능하다.
+
+```md
+<figure style="width: 300px" class="align-left">
+  <img src="/imgs/bio-cup.jpg" alt="">
+  <figcaption>Image caption.</figcaption>
+</figure> 
+```
+
+첫번째 방식으로 오른쪽 정렬을, 두번째 방식으로 왼쪽 정렬을 하면 다음과 같다. 
+
+![image-right](/imgs/logo-trans.png){: .align-right}
+
+<figure style="width: 100px" class="align-left">
+  <img src="/imgs/logo-trans.png" alt="">
+  <figcaption>My logo.</figcaption>
+</figure> 
+
+샘플 텍스트: Megalograptus is a genus of eurypterid, an extinct group of aquatic arthropods. Fossils of Megalograptus have been recovered in deposits of Katian (Late Ordovician) age in North America. The genus contains five species: M. alveolatus, M. ohioensis, M. shideleri, M. welchi and M. williamsae, all based on fossil material found in the United States. Fossils unassigned to any particular species have also been found in Canada. 
+
 ### 갤러리 배치 및 캡션 달기
 
 갤러리를 추가하기 위해서는 앞서 본 front matter에 `gallery:` 항목을 추가한 후 원하는 위치에 캡션과 함께 다음과 같이 작성하면 된다. 
@@ -120,9 +148,9 @@ gallery:
 {% raw %}{% include gallery caption="gallery caption" %}{% endraw %}
 ```
 
-### 유튜브 동영상 추가하기
+### 유튜브 동영상 첨부하기
 
-`liquid` code block으로 다음과 같이 작성한다.:
+`liquid` code block으로 다음과 같이 작성한다:
 
 ```liquid
 {% raw %}{% include video id="FHUHKIrUH6Y" provider="youtube" %}{% endraw %}

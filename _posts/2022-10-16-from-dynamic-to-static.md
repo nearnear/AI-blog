@@ -1,8 +1,8 @@
 ---
-title: "동적 블로그에서 정적 블로그로"
+title: "Gatsby 블로그에서 Jekyll 블로그로"
 categories: updates
 tags:
-    - Jekyll
+    - jekyll
     - minimal-mistakes
 ---
 
