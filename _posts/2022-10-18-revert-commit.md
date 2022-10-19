@@ -1,5 +1,5 @@
 ---
-title: "commit 되돌리기"
+title: "git reset과 revert"
 categories: git
 tags:
     - git
