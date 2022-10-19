@@ -1,6 +1,6 @@
 ---
 title: "Minimal Mistakes 사용법"
-categories: updates
+categories: Recents
 tags:
     - jekyll
     - minimal-mistakes

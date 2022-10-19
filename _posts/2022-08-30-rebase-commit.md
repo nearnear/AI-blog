@@ -1,6 +1,6 @@
 ---
 title: "git rebase로 잔디 회복하기"
-categories: git
+categories: Git
 tags:
     - git
 ---

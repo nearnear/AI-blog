@@ -12,49 +12,29 @@ main:
 side:
   - title: NEWS
     children:
-      - title: "업데이트"
-        url: /news/updates/
-      - title: "근황/후기"
+      - title: "요즈음"
         url: /news/recents/
 
-  - title: AI 노트
+  - title: AI Log
     children:
       - title: "ML/DL"
-        url: /ai-note/ml-dl/
+        url: /ai-log/ml-dl/
       - title: "Papers"
-        url: /ai-note/papers/
-      - title: "MLOps"
-        url: /ai-note/mlops/
+        url: /ai-log/papers/
+      - title: "Math & others"
+        url: /ai-log/math-n-others/
 
-  - title: CS 노트
+  - title: CS Log
     children:
-      - title: "CS"
-        url: /cs-note/cs/
+      - title: "OS & Network"
+        url: /cs-log/os-n-network/
       - title: "Python"
-        url: /cs-note/python/
+        url: /cs-log/python/
       - title: "Algorithm"
-        url: /cs-note/algorithm/
+        url: /cs-log/algorithm/
       - title: "Git & Github"
-        url: /cs-note/git/
+        url: /cs-log/git/
       - title: "DBMS"
-        url: /cs-note/dbms/
+        url: /cs-log/dbms/
       - title: "AWS"
-        url: /cs-note/aws/
-      - title: "Crawling"
-        url: /cs-note/crawl/
-
-  - title: THEORY 노트
-    children:
-      - title: "Math"
-        url: /theory-note/math/
-      - title: "Statistics"
-        url: /theory-note/stats/
-      - title: "Information"
-        url: /theory-note/information/
-      - title: "Physics"
-        url: /theory-note/physics/
-
-  - title: ETC
-    children:
-      - title: "?"
-        url: /etc/planning/
+        url: /cs-log/aws/

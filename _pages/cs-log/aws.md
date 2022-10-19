@@ -1,8 +1,8 @@
 ---
 title: "AWS"
 layout: category
-permalink: /cs-note/aws/
+permalink: /cs-log/aws/
 author_profile: true
-taxonomy: aws
+taxonomy: AWS
 ---
 Notes on AWS

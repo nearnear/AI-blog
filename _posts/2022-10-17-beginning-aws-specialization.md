@@ -1,6 +1,6 @@
 ---
 title: "Coursera AWS Specialization 시작"
-categories: recents
+categories: Recents
 toc: false
 tags:
     - aws

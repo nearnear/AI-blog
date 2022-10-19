@@ -1,7 +1,7 @@
 ---
 title: "python iterator와 generator"
 categories:
-    - python
+    - Python
 tags:
     - python
     - coroutine

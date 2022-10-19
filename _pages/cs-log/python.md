@@ -1,8 +1,8 @@
 ---
 title: "Python"
 layout: category
-permalink: /cs-note/python/
+permalink: /cs-log/python/
 author_profile: true
-taxonomy: python
+taxonomy: Python
 ---
 Notes on Python and its packages

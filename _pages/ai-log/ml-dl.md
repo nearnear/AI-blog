@@ -1,7 +1,7 @@
 ---
 title: "ML/DL"
 layout: category
-permalink: /ai-note/ml-dl/
+permalink: /ai-log/ml-dl/
 author_profile: true
 taxonomy: ML/DL
 ---

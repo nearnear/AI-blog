@@ -1,8 +1,8 @@
 ---
 title: "DBMS"
 layout: category
-permalink: /cs-note/dbms/
+permalink: /cs-log/dbms/
 author_profile: true
-taxonomy: dbms
+taxonomy: DBMS
 ---
 Notes on DBMS

@@ -1,6 +1,6 @@
 ---
 title: "git reset과 revert"
-categories: git
+categories: Git
 tags:
     - git
 ---

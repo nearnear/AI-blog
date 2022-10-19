@@ -1,6 +1,6 @@
 ---
 title: "Gatsby 블로그에서 Jekyll 블로그로"
-categories: updates
+categories: Recents
 tags:
     - jekyll
     - minimal-mistakes

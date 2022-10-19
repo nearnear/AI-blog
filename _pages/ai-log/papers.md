@@ -1,7 +1,7 @@
 ---
 title: "Papers"
 layout: category
-permalink: /ai-note/papers/
+permalink: /ai-log/papers/
 author_profile: true
 taxonomy: Papers
 ---

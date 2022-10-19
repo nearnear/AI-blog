@@ -1,8 +1,9 @@
 ---
-title: "근황/후기"
+title: "요즈음"
 layout: category
 permalink: /news/recents/
 author_profile: true
-taxonomy: recents
+tac: false
+taxonomy: Recents
 ---
 Recent events
