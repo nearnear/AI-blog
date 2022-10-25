@@ -318,9 +318,10 @@ defaults:
   - scope:
       path: ""
       type: archive
-    values:
-      sidebar:
-        nav: "side"
+      author_profile: true
+    # values:
+    #   sidebar:
+    #     nav: "side"
   # _projects
   - scope:
       path: ""
