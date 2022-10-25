@@ -4,7 +4,6 @@ categories:
     - Papers
 tags:
     - distillation
-    - soft target
     - MNIST
     - speech recognition
 ---
