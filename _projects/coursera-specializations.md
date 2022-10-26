@@ -6,7 +6,7 @@ sidebar: none
 
 ## Practical Data Science on the AWS Cloud Specialization
 
-DeepLearning.AI, AWS / 수강중
+**DeepLearning.AI, AWS / 수강중**
 {: .notice--danger}
 
 ```
@@ -28,7 +28,7 @@ DeepLearning.AI, AWS / 수강중
 ```
 
 ## Natural Language Processing Specialization
-DeepLearning.AI / [2022.03.18 수료](https://www.coursera.org/account/accomplishments/specialization/certificate/SGZ7GQEPUWNH)
+**DeepLearning.AI / [2022.03.18 수료](https://www.coursera.org/account/accomplishments/specialization/certificate/SGZ7GQEPUWNH)**
 {: .notice--info}
 
 ```
@@ -59,7 +59,7 @@ DeepLearning.AI / [2022.03.18 수료](https://www.coursera.org/account/accomplis
 
 ## Deep Learning Specialization
 
-DeepLearning.AI / [2021.07.27 수료](https://www.coursera.org/account/accomplishments/specialization/certificate/5GALF6VHLEYZ)
+**DeepLearning.AI / [2021.07.27 수료](https://www.coursera.org/account/accomplishments/specialization/certificate/5GALF6VHLEYZ)**
 {: .notice--info}
 
 ```
