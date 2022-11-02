@@ -219,7 +219,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 6 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -293,7 +293,6 @@ defaults:
       type: posts
     values:
       layout: single
-      # classes: wide
       toc: true
       toc_sticky: true
       show_date: true
@@ -303,8 +302,8 @@ defaults:
       comments: true
       share: true
       related: true
-      # sidebar:
-      #   nav: "side"
+      sidebar:
+        nav: "side"
   # _pages
   - scope:
       path: "_pages"
@@ -318,20 +317,19 @@ defaults:
   - scope:
       path: ""
       type: archive
+    values:
       author_profile: true
-    # values:
-    #   sidebar:
-    #     nav: "side"
+      sidebar:
+        nav: "side"
   # _projects
   - scope:
       path: ""
       type: projects
     values:
       layout: collection
-      # entries_layout: grid
+      entries_layout: grid
       show_date: true
       date_format: "%Y-%m-%d"
-      # classes: wide
       share: true
       sidebar:
         nav: "side"
