@@ -1,8 +1,9 @@
 ---
-title: "python 문자열"
+title: "python 시퀀스 자료구조 - str"
 categories: Python
 tags:
     - python
+    - data structure
     - string
 ---
 

@@ -4,7 +4,7 @@ categories:
     - Papers
 tags:
     - distillation
-    - MNIST
+    - mnist
     - speech recognition
 ---
 

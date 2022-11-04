@@ -1,8 +1,9 @@
 ---
-title: "python 튜플"
+title: "python 시퀀스 자료구조 - tuple"
 categories: Python
 tags:
   - python
+  - data structure
   - tuple
 ---
 

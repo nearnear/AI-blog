@@ -1,8 +1,9 @@
 ---
-title: "python 리스트"
+title: "python 시퀀스 자료구조 - list"
 categories: Python
 tags:
   - python
+  - data structure
   - list
 ---
 
