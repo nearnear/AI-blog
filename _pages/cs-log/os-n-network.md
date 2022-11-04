@@ -1,8 +1,8 @@
 ---
-title: "OS & Network"
+title: "CS"
 layout: category
-permalink: /cs-log/os-n-network/
+permalink: /cs-log/cs/
 author_profile: true
-taxonomy: OS & Network
+taxonomy: CS
 ---
-Notes on Operating System and Network
+Notes on Operating System, Computer Architecture, Network, etc.

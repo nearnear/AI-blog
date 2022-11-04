@@ -26,8 +26,8 @@ side:
 
   - title: CS Log
     children:
-      - title: "OS & Network"
-        url: /cs-log/os-n-network/
+      - title: "CS"
+        url: /cs-log/cs/
       - title: "Python"
         url: /cs-log/python/
       - title: "Algorithm"
