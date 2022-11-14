@@ -1,6 +1,6 @@
 ---
 title: "FGFA for Video Object Detection, 2017"
-categories: Paper
+categories: Papers
 tags:
     - video
 gallery:
