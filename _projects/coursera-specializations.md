@@ -2,6 +2,8 @@
 title: "Coursera Specializations"
 collection: projects
 sidebar: none
+author_profile: true
+last_modified_at: 2022-10-31
 ---
 
 ## Practical Data Science on the AWS Cloud Specialization
@@ -9,7 +11,7 @@ sidebar: none
 **DeepLearning.AI, AWS / 수강중**
 {: .notice--danger}
 
-```
+### Syllabus
 - Course 1: Analyze Datasets and Train ML Models using AutoML
     - Week 1: Explore the Use Case and Analyze the Dataset
     - Week 2: Data Bias and Feature Importance
@@ -25,13 +27,16 @@ sidebar: none
     - Week 1: Advanced model training, tuning and evaluation
     - Week 2: Advanced model deployment and monitoring
     - Week 3: Data labeling and human-in-the-loop pipelines
-```
+
+### In-course Projects
+- Natural Language Text Classification with AWS SageMaker manually and using
+  AutoML
 
 ## Natural Language Processing Specialization
 **DeepLearning.AI / [2022.03.18 수료](https://www.coursera.org/account/accomplishments/specialization/certificate/SGZ7GQEPUWNH)**
 {: .notice--info}
 
-```
+### Syllabus
 - Course 1 : NLP with Classification and Vector Spaces
     - Week 1 : Sentiment Analysis with Logistic Regression
     - Week 2 : Sentiment Analysis with Naïve Bayes
@@ -55,14 +60,16 @@ sidebar: none
     - Week 2 : Text Summarization
     - Week 3 : Question Answering
     - Week 4 : Chatbot
-```
+
+
+### In-course Projects
 
 ## Deep Learning Specialization
 
 **DeepLearning.AI / [2021.07.27 수료](https://www.coursera.org/account/accomplishments/specialization/certificate/5GALF6VHLEYZ)**
 {: .notice--info}
 
-```
+### Syllabus
 - Course 1 : Neural Networks and Deep Learning
     - Week 1 : Introduction to Deep Learning
     - Week 2 : Neural Networks Basics
@@ -89,4 +96,5 @@ sidebar: none
     - Week 2 : Natural Language Processing & Word Embeddings
     - Week 3 : Sequence Models & Attention Mechanism
     - Week 4 : Transformer Network
-```
+
+### In-course Projects
