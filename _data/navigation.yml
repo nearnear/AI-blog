@@ -17,12 +17,12 @@ side:
 
   - title: AI Log
     children:
-      - title: "ML/DL"
+      - title: "ML"
         url: /ai-log/ml-dl/
       - title: "Papers"
         url: /ai-log/papers/
-      - title: "Math & others"
-        url: /ai-log/math-n-others/
+      - title: "Theorectics"
+        url: /ai-log/theorectics/
 
   - title: CS Log
     children:

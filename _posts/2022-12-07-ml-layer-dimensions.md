@@ -1,6 +1,6 @@
 ---
 title: "[pytorch] 텐서 차원 구하기"
-categories: ML/DL
+categories: ML
 tags:
     - multi-modal
     - pytorch

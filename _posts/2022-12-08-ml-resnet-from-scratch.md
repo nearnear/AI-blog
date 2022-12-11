@@ -1,6 +1,6 @@
 ---
 title: "[pytorch] ResNet 처음부터 구현하기"
-categories: ML/DL
+categories: ML
 tags:
     - pytorch
 ---

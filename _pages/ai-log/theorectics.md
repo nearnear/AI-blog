@@ -1,8 +1,8 @@
 ---
-title: "Math & others"
+title: "Theorectics"
 layout: category
-permalink: /ai-log/math-n-others/
+permalink: /ai-log/theorectics/
 author_profile: true
-taxonomy: Math & others
+taxonomy: Theorectics
 ---
 Notes on Mathematics, Statistics, etc.
