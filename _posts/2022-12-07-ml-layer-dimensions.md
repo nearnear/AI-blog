@@ -1,5 +1,5 @@
 ---
-title: "pytorch 텐서 차원 구하기"
+title: "[pytorch] 텐서 차원 구하기"
 categories: ML/DL
 tags:
     - multi-modal
@@ -50,7 +50,7 @@ $$
 배치 수 $N$은 변화시키지 않음을 알 수 있다. 
 
 $$
-H_{out} = \lfloor \frac{H_{in} - 2*\text{padding} - \text{dilation}*
+H_{out} = \lfloor \frac{H_{in} + 2*\text{padding} - \text{dilation}*
 (\text{kernel size}-1) - 1}{\text{stride}} + 1  \rfloor
 $$
 
@@ -74,14 +74,14 @@ $$
 즉 MaxPool2D 레이어는 2D 픽셀의 높이 $H$와 넓이 $W$만 변화시킨다. 
 
 $$
-H_{out} = \lfloor \frac{H_{in} - 2*\text{padding} - \text{dilation}*
+H_{out} = \lfloor \frac{H_{in} + 2*\text{padding} - \text{dilation}*
 (\text{kernel size}-1) - 1}{\text{stride}} + 1  \rfloor
 $$
 
 예를 들어 `nn.MaxPool2d(kernel_size=2, stride=2)`일 때 차원 변화는 다음과 같다. 
 
 $$
-H_\text{out} = \frac{H_\text{in} - 2*0 - 1*1 - 1}{2} + 1 = H_\text{in} / 2
+H_\text{out} = \frac{H_\text{in} + 2*0 - 1*1 - 1}{2} + 1 = H_\text{in} / 2
 $$
 
 즉 MaxPool2D 레이어에 의해 입력 픽셀 높이와 너비가 두배 줄어든다.
