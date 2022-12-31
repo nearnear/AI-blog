@@ -7,7 +7,7 @@ tags:
 ---
 
 **Note:** 본 글은 이전에 작성한 글의 백업입니다.
-{: .notice--info}
+{: .notice}
 
 ## 기초 HTML 분석
 
