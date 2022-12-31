@@ -34,34 +34,36 @@ print(bs.tag.subTag) # tag, subTag는 가상의 태그.
     - 페이지를 찾을 수 없거나("404 Page Not Found"), URL 해석에서 에러가 생긴 경우("URLError")
     - 서버를 찾을 수 없는 경우("500 Internal Server Error")
     - `try ... except` 구문을 통해 예외를 처리한다.
-    ```python
-    from urllib.request import urlopen
-    from urlib.error import HTTPError, URLError
-    
-    try:
-        html = urlopen('https://pythonscrapingthisurldoesnotexist.com')
-    except HTTPError as e:
-        print(e)
-    except URLError as e:
-        print('The server could not be found!')
-    else:
-        print('Got HTML successfully.')
-    ```
+
+```python
+from urllib.request import urlopen
+from urlib.error import HTTPError, URLError
+
+try:
+    html = urlopen('https://pythonscrapingthisurldoesnotexist.com')
+except HTTPError as e:
+    print(e)
+except URLError as e:
+    print('The server could not be found!')
+else:
+    print('Got HTML successfully.')
+```
 
 - `bs.tag.subTag`에서 등장할 수 있는 에러
     - BeautifulSoup는 존재하지 않는 태그에 접근을 시도하면 None 객체를 반환한다. 이때 None 객체에 대해 태그에 접근하려고 하면 AttributeError가 일어난다.
     - 두 개의 태그의 존재 유무를 명시적으로 체크한다.
-    ```python
-    try:
-        badContent = bs.tag.subTag
-    except AttributeError as e: # tag1이 존재하지 않는 경우
-        print('tag was not found.')
+
+```python
+try:
+    badContent = bs.tag.subTag
+except AttributeError as e: # tag1이 존재하지 않는 경우
+    print('tag was not found.')
+else:
+    if badContent == None:
+        print('subTag was not found.')
     else:
-        if badContent == None:
-            print('subTag was not found.')
-        else:
-            print(badContent)
-    ```
+        print(badContent)
+```
 
 
 ## 고급 HTML 분석
@@ -75,13 +77,14 @@ print(bs.tag.subTag) # tag, subTag는 가상의 태그.
 
 ### CSS 활용하기
 - CSS는 HTML 요소를 구분해 서로 다른 스타일을 적용하므로 웹 스크레이퍼에 도움이 된다.
+
     ```python
     nameList = bs.findAll('span', {'class':'green'})
     for name in nameList:
         print(name.get_text())
     ```
     위 코드는 `<span class="green"></span>` 태그에 들어있는 텍스트만 선택해서 파이썬 리스트로 추출한다.
-    - `get_text()`는 모든 태그를 제거한 유니코드 텍스트 문자열을 반환한다. 일반적으로 문서의 태그 구조를 유지하는 것이 바람직하므로 최종 데이터 출력 또는 저장 직전에 사용해야 한다.
+- `get_text()`는 모든 태그를 제거한 유니코드 텍스트 문자열을 반환한다. 일반적으로 문서의 태그 구조를 유지하는 것이 바람직하므로 최종 데이터 출력 또는 저장 직전에 사용해야 한다.
 
 ### find()와 findAll() 메서드 인자들
 
@@ -106,7 +109,8 @@ print(bs.tag.subTag) # tag, subTag는 가상의 태그.
     ```python
     bs.findAll('', {'id':'text', 'class':'green'})
     ```
-    - 주어진 조건을 모두 만족하는 태그 목록을 반환한다.
+    - 주어진 조건을 모두 만족하는 태그 목록을 반환한다. 
+
 
 
 ### BeautifulSoup의 객체
@@ -121,21 +125,21 @@ print(bs.tag.subTag) # tag, subTag는 가상의 태그.
 1. 자식(children)과 자손(descendants) 다루기
     - 자식은 부모보다 한 태그 아래에 있고, 자손은 조상보다 하위 단계에 있는 모든 태그이다. BeautifulSoup는 항상 선택된 태그의 자손을 다룬다.
     - 자식만 찾을 때는 `.contents` 또는 `.children`을 사용한다. 전자는 리스트를 반환하며, 후자는 iterator를 반환한다.
-        ```python
-        for child in bs.find('span', {'class':'green'}).children:
-            print(child)
-        ```
+    ```python
+    for child in bs.find('span', {'class':'green'}).children:
+        print(child)
+    ```
 2. 형제(sibling) 다루기
     - 테이블에서 데이터를 구할 때, 특히 테이블에 타이틀 행이 있는 경우 유용하게 활용할 수 있다. `.next_siblings`은 해당 객체를 제외한 다음 형제만 가져온다. 즉, 타이틀 행을 선택하면 그 타이틀 행을 제외한 모든 테이블 행을 가져온다.
-        ```python
-        for sibling in bs.find('span', {'class':'green'}).next_siblings:
-            print(sybling)
-        ```
+    ```python
+    for sibling in bs.find('span', {'class':'green'}).next_siblings:
+        print(sybling)
+    ```
 3. 부모(parents) 다루기
     - 태그의 부모를 검색하기 위해 `.parent` 또는 `.parents`를 활용한다.
-        ```python
-        print(bs.find('img', {'src':'../img/gifts/img1.jpg'})).parent.previous_sibling.get_text()
-        ```
+    ```python
+    print(bs.find('img', {'src':'../img/gifts/img1.jpg'})).parent.previous_sibling.get_text()
+    ```
 
 
 ### 정규 표현식 (Regular Expression) 활용하기
