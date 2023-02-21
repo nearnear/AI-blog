@@ -14,7 +14,7 @@ tags:
 
 ## 1. Uniform Frame Sampling
 
-<figure>
+<figure style="width: 500px" class="align-center">
 	<a href="/imgs/post-imgs/vivit-ufs.png"><img src="/imgs/post-imgs/vivit-ufs.png"></a>
 	<figcaption>Uniform Frame Sampling, from the paper.
 </figcaption>
@@ -54,7 +54,7 @@ class UniformFrameSampling(layers.Layer):
 
 ## 2. Tubelet Embedding
 
-<figure>
+<figure style="width: 500px" class="align-center">
 	<a href="/imgs/post-imgs/vivit-tubelet-embedding.png"><img src="/imgs/post-imgs/vivit-tubelet-embedding.png"></a>
 	<figcaption>Tubelet Embedding, from the paper.
 </figcaption>
@@ -87,13 +87,13 @@ class TubeletEmbedding(layers.Layer):
 
 임베딩의 차이만 있을 뿐, Positional Encoding은 두 임베딩 이후 동일하게 적용했다. 그 후 ViViT Classifier를 정의해 토큰화 방법을 실험하였다.
 
-<figure>
+<figure style="width: 600px" class="align-center">
 	<a href="/imgs/post-imgs/vivit-result-nodule.png"><img src="/imgs/post-imgs/vivit-result-nodule.png"></a>
 	<figcaption>Training and validation metrics.
 </figcaption>
 </figure>
 
-<figure>
+<figure style="width: 600px" class="align-center">
 	<a href="/imgs/post-imgs/vivit-result-organ.png"><img src="/imgs/post-imgs/vivit-result-organ.png"></a>
 	<figcaption>Training and validation metrics.
 </figcaption>
@@ -103,7 +103,7 @@ class TubeletEmbedding(layers.Layer):
 
 이때 Uniform Frame Sampling은 일부 정보를 누락하기 때문에 당연히 정보의 손실이 적은 Tubelet Embedding이 학습에 유리하지 않을까 생각할 수 있다. 이에 대한 검증을 위해 Sampling 개수를 늘릴 수 있지만, 이렇게 되면 전체 차원에 영향을 미쳐 Tubelet Embedding의 차원도 변화하게 되므로 최적의 학습이 불가능하다고 생각했다. 한편 더 적은 정보를 학습한다면 그만큼 학습이 빠를 것이라는 가설을 세워 결과를 비교하였다.
 
-<figure>
+<figure style="width: 700px" class="align-center">
 	<a href="/imgs/post-imgs/vivit-train-time.png"><img src="/imgs/post-imgs/vivit-train-time.png"></a>
 	<figcaption>Training time comparison.
 </figcaption>
@@ -111,13 +111,13 @@ class TubeletEmbedding(layers.Layer):
 
 그러나 데이터셋과 learning rate에 따라 임베딩 간의 학습 속도 차이는 유의미하지 않았다. 즉 두 임베딩에 따른 학습량의 차이는 크지 않았다. 
 
-<figure>
+<figure style="width: 600px" class="align-center">
 	<a href="/imgs/post-imgs/vivit-result-adrenal.png"><img src="/imgs/post-imgs/vivit-result-adrenal.png"></a>
 	<figcaption>Same hyperparameter, different results.
 </figcaption>
 </figure>
 
-한편 두 임베딩 방법에 같은 하이퍼파라미터를 적용했을 때에도 한쪽은 수렴하고 반대쪽은 발산하는 결과가 나타났다. 임베딩 방법에 따른 하이퍼파라미터 조정이 필요함을 알 수 있으며, 따라서 엄밀히 말해 `같은 조건` 아래에서 두 임베딩 방법을 비교할 수 없었다.
+한편 두 임베딩 방법에 같은 하이퍼파라미터를 적용했을 때 Uniform Frame Sampling은 수렴하는 반면 Tubelet Embedding은 발산하는 경우도 나타났다. 임베딩 방법에 따른 하이퍼파라미터 조정이 필요함을 알 수 있으며, 따라서 엄밀히 말해 `같은 조건` 아래에서 두 임베딩 방법을 비교할 수 없음을 알 수 있었다.
 
 ## 4. 결론
 
