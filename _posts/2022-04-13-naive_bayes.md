@@ -40,10 +40,10 @@ _위와 같은 작업을 수행하는 모델 `model`을 얻는 것이 목적이�
 모델을 살펴보기에 앞서 조건부 확률과 베이즈 룰에 대해 알아보자.
 
 ### 🎲 조건부 확률(Conditional Probability) 이란?
-모수에서 조건 A가 만족될 확률을 $P(A)$, 조건 B가 만족될 확률을 $P(B)$라고 하자. 이때 B에 대한 A의 조건부 확률 $P(A|B)$ 는 조건 B를 만족하는 표본에서 조건 A를 만족하는 표본을 선택할 확률을 의미한다. 즉 $P(A|B)$는 조건 A와 B를 모두 만족하는 표본을 선택할 확률인 $P(A \cap B)$에 모수에서 조건 B를 만족하는 표본을 선택할 확률 $P(B)$를 나눈 값으로 정의된다.
+모수에서 조건 A가 만족될 확률을 $P(A)$, 조건 B가 만족될 확률을 $P(B)$라고 하자. 이때 B에 대한 A의 조건부 확률 $P(A\mid B)$ 는 조건 B를 만족하는 표본에서 조건 A를 만족하는 표본을 선택할 확률을 의미한다. 즉 $P(A\mid B)$는 조건 A와 B를 모두 만족하는 표본을 선택할 확률인 $P(A \cap B)$에 모수에서 조건 B를 만족하는 표본을 선택할 확률 $P(B)$를 나눈 값으로 정의된다.
 
 $$
-P(A|B) =\frac{P(A \cap B)}{P(B)}
+P(A\mid B) =\frac{P(A \cap B)}{P(B)}
 $$
 
 조건부 확률은 뽑을 샘플의 범위를 표본 대신 조건으로 제한하는 효과가 있다. 
@@ -52,39 +52,39 @@ $$
 위의 정의로 부터 두개의 조건부 확률을 표현 할 수 있다.
 
 $$
-P(A|B) = \frac{P(A \cap B)}{P(B)} \\
-P(B|A) = \frac{P(A \cap B)}{P(A)} 
+P(A\mid B) = \frac{P(A \cap B)}{P(B)} \\
+P(B\mid A) = \frac{P(A \cap B)}{P(A)} 
 $$
 
-예를 들어 조건 `A`가 `20대`이고 조건 `B`가 `심장병`이라고 하자. 몇 개의 병원에서 표본 집단을 모아서 **심장병에 걸린 사람이 20대일 확률**을 조사하고자 한다. 우리는 표본 집단 데이터베이스로 부터 **심장병이 걸린 사람의 비율**과 **20대의 비율**을 알고있으며, 나아가 **20대 중에서 심장병에 걸린 사람의 비율**을 알 수 있다. 베이즈 정리는 세가지 정보로부터 심장병에 걸린 사람이 20대일 확률을 도출한다. 대수 연산을 통해 $P(A|B)$를 $P(B|A)$에 대해 다음과 같이 표현할 수 있다.
+예를 들어 조건 `A`가 `20대`이고 조건 `B`가 `심장병`이라고 하자. 몇 개의 병원에서 표본 집단을 모아서 **심장병에 걸린 사람이 20대일 확률**을 조사하고자 한다. 우리는 표본 집단 데이터베이스로 부터 **심장병이 걸린 사람의 비율**과 **20대의 비율**을 알고있으며, 나아가 **20대 중에서 심장병에 걸린 사람의 비율**을 알 수 있다. 베이즈 정리는 세가지 정보로부터 심장병에 걸린 사람이 20대일 확률을 도출한다. 대수 연산을 통해 $P(A \mid B)$를 $P(B \mid A)$에 대해 다음과 같이 표현할 수 있다.
 
 $$
-P(A|B) = \frac{P(A)}{P(B)} \times P(B|A) ...... (*)
+P(A\mid B) = \frac{P(A)}{P(B)} \times P(B\mid A) ...... (*)
 $$
 
-두 조건의 조건부 확률의 관계를 나타내는 수식 (*)을 **베이즈 정리**라고 한다. 이때 $P(A)$를 **사전확률(prior)**, $P(A|B)$를 **사후확률(posterior)**, 그리고 $P(B|A)$를 **우도(likelihood)**라고 부른다.
+두 조건의 조건부 확률의 관계를 나타내는 수식 (*)을 **베이즈 정리**라고 한다. 이때 $P(A)$를 **사전확률(prior)**, $P(A \mid B)$를 **사후확률(posterior)**, 그리고 $P(B \mid A)$를 **우도(likelihood)**라고 부른다.
 
 
 ## 3. 조건부 빈도 세기
-텍스트가 내포하는 감정을 이진 분류하기 위해 분류 클래스를 $class \in \{positive, negative\}$로 정의하자. $m$개의 단어를 포함하는 corpus에 속하는 단어 $w_i \in corpus$에 대해 우리가 구하고자 하는 값은 $P(class|w_i)$, 즉 단어가 주어졌을 때 단어가 특정 class에 속할 확률을 구하는 것이다. 베이즈 정리를 떠올려 보면:
+텍스트가 내포하는 감정을 이진 분류하기 위해 분류 클래스를 $class \in \{positive, negative\}$로 정의하자. $m$개의 단어를 포함하는 corpus에 속하는 단어 $w_i \in corpus$에 대해 우리가 구하고자 하는 값은 $P(class \mid w_i)$, 즉 단어가 주어졌을 때 단어가 특정 class에 속할 확률을 구하는 것이다. 베이즈 정리를 떠올려 보면:
 
 $$
-P(class|w_i) = \frac{P(class) \cdot P(w_i|class)}{P(w_i)}
+P(class\mid w_i) = \frac{P(class) \cdot P(w_i\mid class)}{P(w_i)}
 $$
 
 이며 $P(w_i)$는 $w_i$에 대한 상수값이므로 확률을 계산할 때 무시할 수 있다. 우리는 문장을 입력받아 각 단어의 조건부 확률을 계산해서 나이브 가정에 따라 한 문장의 조건부 확률을 반환하고자 한다. 따라서 **나이브 베이즈** 모델의 아이디어를 수식으로 나타내면 예측하고자 하는 문장 $sentence$에 속한 모든 단어 $w_i \in sentence$ ($i=1, .., n$)에 대해 다음과 같이 쓸 수 있다: 
 
 $$
-\hat{y} = argmax_{class} P(class) \prod_{i=1}^{n}P(w_i|class)
+\hat{y} = argmax_{class} P(class) \prod_{i=1}^{n}P(w_i\mid class)
 $$
 
-위 식은 최대 우도 추정(Maximum Likelihood Estimation, MLE)의 아이디어이기도 하다. 우선은 corpus에 대한 조건부 빈도인 $P(w_i|class)$를 계산해야 한다.
+위 식은 최대 우도 추정(Maximum Likelihood Estimation, MLE)의 아이디어이기도 하다. 우선은 corpus에 대한 조건부 빈도인 $P(w_i\mid class)$를 계산해야 한다.
 
 다시 베이즈 정리에 의해, 클래스에 대한 조건부 확률을 다음과 같이 계산할 수 있다.
 
 $$
 \begin{aligned}
-P(w | class) &= \frac{P(w \cap class)}{P(class)} \\
+P(w \mid  class) &= \frac{P(w \cap class)}{P(class)} \\
 &= \frac{freq(w, class)}{N_{class}}
 \end{aligned}
 $$
@@ -95,13 +95,13 @@ $$
 Laplacian Smoothing은 조건부 확률이 0이 되는 것을 방지하기 위해 사용하는 기법이다. 위에서 본 최대 우도 추정에 따르면 모든 특성에 대해 likelihood를 곱하게 되는데, 만약 corpus에 없는 단어가 들어오면 다른 특성들에 관계없이 예측값이 0이 될 것이다. 분자값에 bias를 1 더하면 우리가 원하는 분류를 수행할 수 있다. 
 
 $$
-P(w|class) = \frac{freq(w, class) + 1}{N_{class} + V_{class}}
+P(w\mid class) = \frac{freq(w, class) + 1}{N_{class} + V_{class}}
 $$
 
 $V_{class}$는 클래스에 등장하는 **유일한** 단어의 개수이다. 분모에는 $V_{class}$를 더함으로서 모든 단어에 대한 likelihood가 1이 넘지 않도록 설정할 수 있다:
 
 $$
-\sum_{w}P(w|class) = \frac{\sum_w freq(w,class) + V_{class}}{N_{class} + V_{class}}
+\sum_{w}P(w\mid class) = \frac{\sum_w freq(w,class) + V_{class}}{N_{class} + V_{class}}
 $$
 
 
@@ -112,16 +112,16 @@ $$
 우선 ratio란 분류 $class$에 대한 조건부 확률의 비율이다. 임의의 단어 $w_i$에 대해 $ratio(w_i)$는 다음과 같이 정의할 수 있다.
 
 $$
-ratio(w_i) = \frac{P(w_i|Pos)}{P(w_i|Neg)}
+ratio(w_i) = \frac{P(w_i\mid Pos)}{P(w_i\mid Neg)}
 $$
 
 Likelihood란 표본을 결합 확률로 나타낸 함수이며, 여기서는 입력 문장$s$가 임의의 $class$일 확률을 의미한다. 여기서는 Likelihood를 ratio에 대해 정의하자. 즉 모든 입력값 $w_i \in s$에 대해 ratio를 곱한 값으로 표현한다.
 
 $$
-likelihood(s) = \prod^{m}_{i=1}\frac{P(w_i|Pos)}{P(w_i|Neg)}
+likelihood(s) = \prod^{m}_{i=1}\frac{P(w_i\mid Pos)}{P(w_i\mid Neg)}
 $$
 
-만약 입력값의 모든 단어 $w_i$가 corpus의 긍정적인 라벨과 부정적인 라벨에서 같은 빈도로 나타났다면 likelihood 값은 `1`로 나타날 것이다. 이 결과를 긍정적이지도 부정적이지도 않은 **중립 값**이라고 볼 수 있다. 반면 분모 분자는 빈도 수이므로 likelihood는 음의 값을 가질 수 없고, 분모 $P(w_i|Neg)$가 분자 $P(w_i|Pos)$ 보다 커질 수록 0에 가까워지고 반대의 경우 양의 무한대 값에 가까워질 수 있다.
+만약 입력값의 모든 단어 $w_i$가 corpus의 긍정적인 라벨과 부정적인 라벨에서 같은 빈도로 나타났다면 likelihood 값은 `1`로 나타날 것이다. 이 결과를 긍정적이지도 부정적이지도 않은 **중립 값**이라고 볼 수 있다. 반면 분모 분자는 빈도 수이므로 likelihood는 음의 값을 가질 수 없고, 분모 $P(w_i \mid  Neg )$가 분자 $P(w_i \mid  Pos)$ 보다 커질 수록 0에 가까워지고 반대의 경우 양의 무한대 값에 가까워질 수 있다.
 
 ### 🎲 Naive 란?
 베이즈 모델이 **naive**(순진하다)는 말은 모수의 모든 표본이 상호 독립적이고 완전하다고 가정하는 것을 뜻한다. 즉 머신 러닝 모델에서는 데이터의 모든 특성들(features)을 알 수 있고, 나아가 특성들이 서로 독립적이라고 가정하는 것을 뜻한다. 예를 들어 한 문장을 데이터 한개라고 하면, 문장에 속한 단어를 데이터의 특성들로 볼 수 있고 나이브 베이즈 모델은 이 단어들이 상호 연관(covariate) 되어있지 않다고 가정한다. 
@@ -132,19 +132,19 @@ $$
 \begin{aligned}
 P(class, w_1, ..., w_n) 
 &= P(class) \cdot P(w_1, ..., w_n) \\
-&= P(class) \cdot P(w_1|class) \cdot P(w_2, ..., w_n) \\
-&= P(class) \cdot P(w_1|class) \cdot P(w_2|class, w_1) \cdot P(w_3, ..., w_n) \\
+&= P(class) \cdot P(w_1\mid class) \cdot P(w_2, ..., w_n) \\
+&= P(class) \cdot P(w_1\mid class) \cdot P(w_2\mid class, w_1) \cdot P(w_3, ..., w_n) \\
 &= ...
 \end{aligned} 
 $$
 
-이렇게 문장의 조건부 확률을 앞에 등장한 단어들과 class에 대한 조건부 확률 곱으로 나타낼 수 있다. 여기서 나이브 가정은 특성들 간의 관계를 독립적이라고 가정하므로 임의의 쌍 $i \neq j$에 대해 $P(w_i|class) = P(w_i|class, w_j)$를 만족한다. 따라서 문장의 조건부 확률을 보다 간단하게 표현할 수 있다.
+이렇게 문장의 조건부 확률을 앞에 등장한 단어들과 class에 대한 조건부 확률 곱으로 나타낼 수 있다. 여기서 나이브 가정은 특성들 간의 관계를 독립적이라고 가정하므로 임의의 쌍 $i \neq j$에 대해 $P(w_i \mid  class) = P(w_i \mid  class, w_j)$를 만족한다. 따라서 문장의 조건부 확률을 보다 간단하게 표현할 수 있다.
 
 $$
 \begin{aligned}
 P(class, w_1, ..., w_n) 
-&= P(class) \cdot P(w_1|class) \cdot ... \cdot P(w_n|class) \\
-&= P(class) \cdot \prod_{i=1}^{n} P(w_i|class)
+&= P(class) \cdot P(w_1\mid class) \cdot ... \cdot P(w_n\mid class) \\
+&= P(class) \cdot \prod_{i=1}^{n} P(w_i\mid class)
 \end{aligned} 
 $$
 
@@ -157,8 +157,8 @@ $$
 
 $$
 \begin{aligned}
-log\_ ratio(w_i) &= log \frac{P(w_i|Pos)}{P(w_i|Neg)} \\
-log\_ likelihood &= \sum^{m}_{i=1} log \frac{P(w_i|Pos)}{P(w_i|Neg)}
+log\_ ratio(w_i) &= log \frac{P(w_i\mid Pos)}{P(w_i\mid Neg)} \\
+log\_ likelihood &= \sum^{m}_{i=1} log \frac{P(w_i\mid Pos)}{P(w_i\mid Neg)}
 \end{aligned}
 $$
 
@@ -166,7 +166,7 @@ $$
 
 $$
 \begin{aligned}
-\lambda(w_i) &= log\frac{P(w_i|Pos)}{P(w_i|Neg)} \\
+\lambda(w_i) &= log\frac{P(w_i\mid Pos)}{P(w_i\mid Neg)} \\
 log\_ likelihood(s) &= \sum^{n}_{i=1} \lambda(w_i)
 \end{aligned}
 $$
@@ -202,7 +202,7 @@ $$
 0. 훈련 데이터를 전처리 한다.
 1. 토큰화 된 단어의 빈도 $freq(w, class)$를 계산한다.
 2. 모든 훈련 데이터의 단어에 대해 훈련해 log prior와 log likelihood 값을 구한다.
-    - 모든 훈련 데이터의 단어에 대해 $P(w|Pos)$와 $P(w|Neg)$ 값을 구한다.
+    - 모든 훈련 데이터의 단어에 대해 $P(w\mid Pos)$와 $P(w\mid Neg)$ 값을 구한다.
     - 모든 훈련 데이터의 단어에 대해 $P(Pos)$와 $P(Neg)$ 값을 구한다.
 3. 훈련한 모델의 가중치로 정서를 분류한다.
 
@@ -265,7 +265,7 @@ def train_naive_bayes(freqs, train_x, train_y):
         freq_pos = freqs.get((w, 1), 0)
         freq_neg = freqs.get((w, 0), 0)
 
-        # get P(w|Pos) and P(w|Neg).
+        # get P(w\mid Pos) and P(w\mid Neg).
         p_w_pos = (freq_pos + 1) / (N_pos + V)
         p_w_neg = (freq_neg + 1) / (N_neg + V)
 
