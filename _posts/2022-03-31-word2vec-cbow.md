@@ -32,8 +32,10 @@ CBOW 모델은 여러개의 단어 데이터를 입력하면 그에 상응하는
 ## 1. 모델의 구조
 CBOW는 얕은 신경망 모델로, 이 글에서는 한 개의 은닉층(hidden layer)를 가지는 신경망 모델을 고려한다.
 
-![](cbow_model_architecture.png)
-*image by DeepLearning.AI*
+<figure style="width: 500px" class="align-center">
+	<a href="/imgs/post-imgs/ml-cbow-model_architecture.png"><img src="/imgs/post-imgs/ml-cbow-model_architecture.png"></a>
+	<figcaption>image by DeepLearning.AI</figcaption>
+</figure>
 
 모델의 흐름은 다음과 같다.
 1. 텍스트 데이터를 원 핫 벡터로 변환한다.
@@ -157,8 +159,11 @@ cbow_model.fit(
 내재적 평가(Intrinsic Evaluation)는 임베딩된 단어들의 의미론적이고 문법론적인 관계를 평가하는 방법이다. 유의어(Analogies) 평가나 클러스터링 알고리즘, 또는 PCA 같은 시각화 기법들이 내재적 평가에 포함된다. 반면 외재적 평가(Extrinsic Evaluation)는 모델의 전체적인 성능을 파악하는데에 사용되는 방법이다. 전체 모델을 평가할 수 있지만, 평가 시간이 오래 걸리며 개선 방법에 대한 직관을 얻기 어렵다는 단점이 있다.
 
 ### 📂  테스트 셋에 대해 (내재적으로) 평가하기
-![](Semantic-Syntactic_Word_Relationship_test_set.png)
-*table from Mikolov et al., 2013, Efficient Estimation of Word Representations in Vector Space*
+
+<figure style="width: 500px" class="align-center">
+	<a href="/imgs/post-imgs/ml-cbow-test_set.png"><img src="/imgs/post-imgs/ml-cbow-test_set.png"></a>
+	<figcaption>Table from Mikolov et al., 2013, Efficient Estimation of Word Representations in Vector Space.</figcaption>
+</figure>
 
 위의 표는 4개의 모델을 두가지 훈련 데이터에 대해 평가한 결과이다. 첫번째 훈련 데이터는 `의미론적(semantic)`이고 `문법론적(syntactic)` 관계 정확도인데, CBOW가 의미론적 정확도는 Skip-gram보다 두배 이상 떨어지지만 문법적 정확도에서는 조금 더 나은 것을 알 수 있다. 그렇지만 의미론적 정확도에 비해 문법론적 정확도에서 평가 모델들의 편차가 더 적었다. 두번째 데이터 셋에 대해서는 CBOW가 Skip-gram보다 단어 관계 평가가 조금 더 나은 것을 볼 수 있다.
 
