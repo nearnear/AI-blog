@@ -21,8 +21,8 @@ side:
         url: /ai-log/ml-dl/
       - title: "Papers"
         url: /ai-log/papers/
-      - title: "Theorectics"
-        url: /ai-log/theorectics/
+      # - title: "Theorectics"
+      #   url: /ai-log/theorectics/
 
   - title: CS Log
     children:
