@@ -1,5 +1,5 @@
 ---
-title: NLP, 나이브 베이즈 분류
+title: "[NLP] 나이브 베이즈 분류"
 categories: ML
 tags:
     - NLP

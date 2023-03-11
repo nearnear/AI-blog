@@ -1,5 +1,5 @@
 ---
-title: NLP, Word2Vec - CBOW
+title: "[NLP] Word2Vec - CBOW"
 categories: ML
 tags:
     - NLP

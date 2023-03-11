@@ -1,12 +1,14 @@
 ---
-title: Transformer, 2017
-categories: Papers
+title: "[NLP] Transformer, 2017"
+categories: ML
 tags:
     - NLP
     - Attention
     - Transformer
 ---
 
+**Note:** 본 글은 이전에 작성한 글을 백업한 것입니다.
+{: .notice--info}
 
 원 논문:
 > Vaswani et al., 2017, "Attention is all you need" ([Link to arxiv](https://arxiv.org/abs/1706.03762))
