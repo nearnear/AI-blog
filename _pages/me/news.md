@@ -1,9 +1,9 @@
 ---
-title: "요즈음"
+title: "News"
 layout: category
-permalink: /news/recents/
+permalink: /me/news/
 author_profile: true
 tac: false
-taxonomy: Recents
+taxonomy: news
 ---
 Recent events

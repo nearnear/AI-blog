@@ -10,10 +10,12 @@ main:
 
 # sidebars
 side:
-  - title: NEWS
+  - title: ME
     children:
-      - title: "요즈음"
-        url: /news/recents/
+      - title: "News"
+        url: /me/news/
+      - title: "Hobby"
+        url: /me/hobby/
 
   - title: AI Log
     children:
@@ -21,8 +23,6 @@ side:
         url: /ai-log/ml-dl/
       - title: "Papers"
         url: /ai-log/papers/
-      # - title: "Theorectics"
-      #   url: /ai-log/theorectics/
 
   - title: CS Log
     children:

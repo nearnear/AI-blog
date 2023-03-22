@@ -108,7 +108,7 @@ author:
   name             : "near"
   avatar           : "/imgs/bio-cup.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "남이야 뭐라 하건!"
-  location         : "Seoul, Korea"
+  location         : # "Seoul, Korea"
   # email            : "hynjng.yeo@gmail.com"
   links:
     - label: "Email"
@@ -289,7 +289,7 @@ collections:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single
@@ -314,16 +314,16 @@ defaults:
       sidebar:
         nav: "side"
   # _home
-  - scope:
-      path: ""
-      type: archive
-    values:
-      author_profile: true
-      sidebar:
-        nav: "side"
+  # - scope:
+  #     path: ""
+  #     type: archive
+  #   values:
+  #     author_profile: false
+      # sidebar:
+      #   nav: "side"
   # _projects
   - scope:
-      path: ""
+      path: "_projects"
       type: projects
     values:
       layout: collection
@@ -331,5 +331,5 @@ defaults:
       show_date: true
       date_format: "%Y-%m-%d"
       share: true
-      sidebar:
-        nav: "side"
+      # sidebar:
+      #   nav: "side"
