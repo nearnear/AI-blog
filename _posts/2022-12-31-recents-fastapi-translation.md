@@ -1,6 +1,6 @@
 ---
 title: "FastAPI 문서 번역하기"
-categories: Recents
+categories: news
 tags:
     - pr
 ---
