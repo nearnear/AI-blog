@@ -1,5 +1,5 @@
 ---
-title: "ViViT의 토큰화 방법 비교하기"
+title: "[Vision] ViViT의 토큰화 방법 비교하기"
 categories: ML
 tags:
     - transformer
