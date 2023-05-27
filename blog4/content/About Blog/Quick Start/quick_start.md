@@ -6,6 +6,7 @@ category: "Quick Start"
 draft: false
 ---
 
+
 ## :fire: Quick Start
 
 ### 1. Create a Gatsby site

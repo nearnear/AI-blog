@@ -88,6 +88,13 @@ module.exports = {
               strict: `ignore`
             }
           },
+          // add remark-vscode plugin
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+                theme: 'Abyss' // Or install your favorite theme from GitHub
+            }
+          },
           `gatsby-remark-copy-linked-files`,
         ],
       },
