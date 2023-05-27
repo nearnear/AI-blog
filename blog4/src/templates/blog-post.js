@@ -13,6 +13,9 @@ import { PAGE } from "../constants";
 import { Layout } from "../layout";
 import "./blog-post.scss";
 
+// reference katex.min.css
+import "katex/dist/katex.min.css";
+
 const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark, allMarkdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
